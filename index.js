@@ -45,7 +45,6 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  /*Your code here*/
 }
 
 
@@ -66,7 +65,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-
+return reviews[5].feedback
 
 
 
