@@ -168,7 +168,7 @@ Use the getLongReviews function below to do the following:
 */
 
 function getLongReviews(/* code here */) {
-    /* code here */
+    //   
   }
   
 
