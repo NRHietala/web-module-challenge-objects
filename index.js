@@ -13,8 +13,8 @@ The function should:
   2. Create and return an object using the received values  
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+   return {name, price, category};
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -25,7 +25,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem("Batsicles", 5, "dessert"));
+console.log(createMenuItem("Halloween Cookies", 10, "dessert"));
+console.log(createMenuItem("Boneless Jello", 1, "dessert"));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -45,6 +47,13 @@ export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
+  discount: function(customer) {
+    if(customer === "teacher" || customer === "student") {
+      return 13.5;
+    } else {
+      return 16.2;
+    }
+  },
 }
 
 
@@ -65,7 +74,8 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console
 */
-return reviews[5].feedback
+
+console.log(reviews[5].feedback);
 
 
 
@@ -75,6 +85,8 @@ Using the reviews array above do the following:
   2. log the whole array to the console, make sure the new review is inside of it   
 */
 
+reviews.push("Nate", 5 , "It was awesome!");
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -82,8 +94,8 @@ Reyna's feedback is missing! Use what you know to do the following:
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
-
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.log(reviews);
 
 
 
@@ -97,8 +109,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, i) {
+  return `${arr[i].name} gave the restaurant a ${arr[i].rating} star review, and their feedback was: ${arr[i].feedback}`;
 }
 
 
